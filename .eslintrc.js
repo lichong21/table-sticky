@@ -12,7 +12,15 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-console': 0,
+    'no-debugger': 0,
+    'comma-dangle': 0,
+    'prefer-destructuring': 0,
+    'no-param-reassign': 0,
+    'no-explicit-any': 0,
+    '@typescript-eslint/no-explicit-any': 0,
+    'prefer-arrow-callback': 0,
+    semi: 0,
+    quotes: 0
   },
 };

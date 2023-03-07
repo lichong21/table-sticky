@@ -1,12 +1,26 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <StickyTopTable />
+    <!-- <StickyTopTableMul /> -->
   </div>
 </template>
+
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator';
+import StickyTopTable from './views/StickyTopTable.vue';
+import StickyTopTableMul from './views/StickyTopTableMul.vue';
+
+@Component({
+  components: {
+    StickyTopTable,
+    StickyTopTableMul
+  }
+})
+export default class App extends Vue {
+
+}
+
+</script>
 
 <style lang="scss">
 #app {
