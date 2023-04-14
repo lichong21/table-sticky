@@ -12,15 +12,15 @@
     <h1>dasdas</h1>
     <h1>dasdas</h1>
     <el-table
-      v-sticky="{ top: 100, parent: 'parentContiner', isFixed: false }"
+      v-sticky="{ top: 0, parent: 'parentContiner', isFixed: true }"
       :data="tableData"
       header-row-class-name="custom-header"
       border
     >
-      <!-- <el-table-column prop="date" label="日期" fixed="left" width="180">
+      <el-table-column prop="date" label="日期" fixed="left" width="180">
       </el-table-column>
       <el-table-column prop="name" label="姓名" fixed="left" width="180">
-      </el-table-column> -->
+      </el-table-column>
       <el-table-column prop="address" label="地址"> </el-table-column>
       <el-table-column prop="month" label="月份"> </el-table-column>
       <el-table-column prop="age" label="年龄"> </el-table-column>

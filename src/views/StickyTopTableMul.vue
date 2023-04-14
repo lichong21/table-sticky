@@ -1,12 +1,12 @@
 <template>
   <div id="parentContiner">
     <el-table
-      v-sticky="{ parent: 'parentContiner' }"
+      v-sticky="{ top: 10, parent: 'parentContiner', isFixed: false }"
       :data="tableData"
       style="width: 100%"
     >
-      <el-table-column prop="date" label="日期" fixed="left" width="150">
-      </el-table-column>
+      <!-- <el-table-column prop="date" label="日期" fixed="left" width="150">
+      </el-table-column> -->
       <el-table-column label="配送信息">
         <el-table-column prop="name" label="姓名" width="120">
         </el-table-column>

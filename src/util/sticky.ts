@@ -1,7 +1,6 @@
 const sticky = {
   inserted(el: any, binding: any) {
-    console.log(1111111, el, binding);
-    const { parent, top, isFixed } = binding.value || {};
+    const { parent, top = 0, isFixed = false } = binding.value || {};
     // 获取table的表头和表主体
     const header = el.children[1];
     const body = el.children[2];
@@ -14,8 +13,6 @@ const sticky = {
         fixed = el.children[3];
         fixedHeader = fixed.children[0];
         ths = fixedHeader.getElementsByTagName('th');
-        console.log(2222, ths);
-        console.log('fixed', fixed);
       });
     }
     // 获取表格的父容器
@@ -27,8 +24,6 @@ const sticky = {
       // 获取表头距离父容器的高度
       const headTop = header?.getBoundingClientRect().top;
       if (headTop < top) {
-        // console.log('headTop', headTop, 'headHeight', headHeight, 'top', top);
-        console.log('开始吸顶');
         body.style.paddingTop = `${headHeight}px`;
         header.style.position = 'fixed';
         header.style.zIndex = '2';
